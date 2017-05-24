@@ -1,0 +1,112 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: LSM Chat API
+  description: 'TODO: Add Description'
+  license:
+    name: MIT
+    url: http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
+host: example.com
+basePath: /
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /api/chatting/getchatrooms/591d78fc831fbbf4a1b8ee39:
+    get:
+      description: 'TODO: Add Description'
+      summary: Find Chat Room List
+      tags:
+      - Misc
+      operationId: Find Chat Room List
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/chatting/getchatrooms/591d78fc831fbbf4a1b8ee39
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Find Chat Room List
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/chatting/attachment/591d77d2495aa750c3e61587:
+    post:
+      description: 'TODO: Add Description'
+      summary: Attach Image while chatting
+      tags:
+      - Misc
+      operationId: Attach Image while chatting
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/AttachImageWhileChattingrequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/chatting/attachment/591d77d2495aa750c3e61587
+          headers:
+            Content-Type: application/json
+          body: >-
+            {
+            	"imgurl":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwYAAALQCAYAAAAq1mdSAABD1klEQVR42u3debweZ0H3/+/M3GdJ0jRN0rR0paWlLUuptOw7BXzY5SeCRTZBeFwQFXdUREAfQATEhedBUUBQVBAQBAQEQZRSKCJbKbSUQlu6JGmSZjvLPTO/P2ZOzkmTQrOf5f1+vfLK0vXMmXvu63PPdV1TtG07HQAAYEkrHQIAAEAYAAAAwgAAABAGAACAMAAAAIQBAAAgDAAAAGEAAAAIAwAAQBgAAADCAAAAEAYAAIAwAAAAhAEAACAMAAAAYQAAAAgDAABAGAAAAMIAAAAQBgAAgDAAAACEAQAAIAwAAABhAAAACAMAAEAYAAAAwgAAABAGAACAMAAAAIQBAAAgDAAAAGEAAAAIAwAAQBgAAADCAAAAEAYAAIAwAAAAhAEAACAMAAAAYQAAAAgDAABAGAAAAMIAAAAQBgAAgDAAAACEAQAAIAwAAABhAAAACAMAAEAYAAAA+2zgEAAsVk1SJyma/rdt/+ft7fhni/6jo6L/R8qkSnyeBCAMAJiv6qYb/DdtP+gvkkHVDeLnDuYPxpi+aZKmnv3vlEX3Ly4FA8BCV7RtO+0wACwUTRcCbf+p/0wAfD87NhWZ2Jzs3Jjs2JhM7UjqiWQ4kUxPFBlOJ4PRZDCejI61qcaS0aOT5WuSZWuS5WvbjK28ncGQpCiSqoy7CwDCAICDHgJNUlbdj725+TtFrv988r0vF7n5qiIbr0puvqLItg3JMLv/aGbeAfby75mZZVQmGUl3x2HQ/3rlCW3WnpGsOTM59ow2J57f5oQfSo4+ce9zk5rp7i5GUSaVG9QAwgCA/YiBuhukD0b2/Msbryry3U8n3/hIme99Mdn4rSJbprsBf9MP6kf7Af3MDYWy7KKiqG6jCG4dCG13B6Ctuyip0/2YnhMXRf/fWL08WXtmm1Pv3eaM/5Wc9sB2r7EwnOrvJtyOuxwACAMAMXCrGNh8XZHL3lfksn8ucs1nimzenuxM9yn+SB8BI1VSjnQD75mBffofTWZ/ve9vE9ltIXJRzIZF2yTNMJmuk6l0P+oky5OsWZOc/tAmd3lScs7j2qxY2+4ZCe4kAAgDAPoeGHbz8weju//5dz9b5L/fVuQbHy7yve8UmewjYDzJaJVUo91Av003Gm/aI/c1lEWSavZGxPRkMtUmE3NC4eSz29zlSW3Of1ab4+96q0iY7qdJuYsAIAwAllYNJMN6z8HwtZ8vculbinz5nWWu39wNtMeTjJez4dC2XUikncdfX9F9XTN3L6Ynk519KIwkOenkLhDu+Zw2686c/ULqYfc1l+4iAAgDgKUQBHOnCu3YWOSSNxX57BuLXHNdN5JelmTZaDdAbuvZ3X4W7ltNHwpVUk8lO4bdVKjRJKffrc2DXtjmXs9ruvUPffPU03tfXwGAMABYVEFw1SeL/Psry1z20SLb0k23WTFIytFFEgPfx8wi6OFEsr1JJpOsSnLPH2/y8N9pc/zdZ+8iDKdv35asAAgDgPkdBMPd1w988R1lPvHyIt+6okiVZEWS0WX9Qt566R2isuqmHE1OJFvT7aJ0twe2edTLm5xx4a0CwR0EAGEAsNDceiB78Z+X+dhLy1y3sb87MNINiuuZpwgvcWWRFCPJcDLZWndbot7p7DaPeXWbu/9IIxAAhAHAwlIPd9+C8/NvKvKh3ypz/c1FViRZMdZ1wFK8O3B7VYPu+Gyd7qYZ3fmsNo9/XZOzH9cVVNt2060sUgYQBgDzTtN0A9aqX0D71X8q8t4XlLnuRkGwv8oqSZvcMtU9I+Hs89r82F83Ofn8djbCylh/ACAMAOaHejqp+uktN3y1yLueU+ZrlxbdlKHxbnArCA4sENo+EJok9/uxNk/5yzpjx3R/3fQiAGEAcEQ1w6QY9A/2apJ/fG6VT7+t23J01Wi3qFYQHDzVoNvudFPTrdN47CuaXPg7za7vRUoPSQMQBgCH2dy1BF97T5l3PqPMhp3JmiSD8e6vc+gCYXIi2ZzkjDu3eea7mpxwXje9yN0DAGEAcFg0TXeHoCiT6W1F3vGjRS75WJmjkiwXBIfx7avbyWjrVFInedQvNHniG5o9og0AYQBw0A2HyaAfcF7+wSJv+ZEqW+tk9Ug3hcW0ocOvqpLpyeTmJKffsc3zP9pk7Vnd3YNmaOciAGEAcJDN/RT6XT9Z5hNv6+4SLFvWLT7mSL6VdQuUt050Oz899XVNHvgidw8AhAHAwdQkTT9tZfN3ivz5A8tcc12RtVW38Lh1l2DemLv24N4/3OZ5H6nFAYAwADhwcweUX3lXmbc8tUyTZOV4vwsO8+9dreh+bJxKTji+zQv+s8maM9s0bVK28cwDAGEAsG+aun/AVpIP/mKZf/mTfuqQBcYLQjnophYVSZ7z903u8eP9tqaNLU0BhAHA7TT3TsFfPqLKpZ8ocuyg+yS6bR2fhWJmatEtSZ78kiaPfPnsMw8sSgYQBgC3KwqG25LX3bPK1VcWWTvafdLMAnyX6x8yt6FJHvETTX78b8UBgDAAuJ1RsPHKIq//oSpbtierx5LaAuMF/lbXBcL6qeQe923zgs/W4gBAGADs3cwg8cavFnnNuVXqJEdZZLyoVFVy02Ry57u2+ZWv2bEIQBgA3DoK+oXG11xS5PX3q1IkWeFOwaKNg5snk5NPa/Nr32xSjbTiAKBjawZgiUfBsIuCb3+qyB/NRMG4KFis6rqbHnbt1UX+zx2r1JNFqoGdpgCEAbC0B4n99KFrv1DkDQ+rMppk2ahB4qKPwTpZPZ7ceH3yh3fu9qQVBwDCAFjCUVANkhu/VuR196pSpXtGQWv3oaURB8NkzXhy3TXJH549GweNO0WAMABYelGw+TtF/ujuc9YU+MR4yZ0Hq8eSq79Z5I/P6+KgrJJaHALCAGDxa+r+OQWTRV5/9yrTsdB4qZ8Px44ll3+5yFsf1985KJOIA0AYACziQWC/0DhJ/vjcMhu3JStFwZJX18mxo8nFHyryL7/Qvy8WjgsgDAAWaRXMPszqzY+octUVRVaPmVNOp22SdYPkA39a5rN/ViSFZ1gAwgBgcXZB2/38oV8pc8kniqwdFQXcSpGsTvL2F1a55rNFSjsVAUvsKugBZ8CiV9fdg60ue0+RP31ylTUeZsVtvStWyc7JZLRq84qtdQbLZh+AB7DIuWMALG7NdBcFm79b5M1PrnJ0P/iDvWnrZPlYsrUu8mf3nd2pyGJkQBgALOQoaJJypPv1n9+/TJNkZKwb/MFtnjd1smYsuewrRT7wwu59UhcAwgBgEXj3c8pc870iK8dFAbdPXSfrquTDf1bmqk8VKUvrDQBhALAwB3bDpCyTyz9U5ONvLbN2YJcZ9k0xSJYl+asfrpL++RfOIUAYACwgTf9k4+mJIm95XJUVsXiUfTez3mDTVPKW/uFnhYXrgDAAWDhmBm9/+6NltiZZvszWpOxnZNbJ2pHkko8U+do/FSliShEgDAAWhHrYPbT26x8oc8mHi6wdSWq7MnOAb5VHJfm7p3V3DUwpAoQBwDzXNN2gLUn+7qllViRpXeY40PNqZkrRdPL3F3UnVOG8AoQBwPzVP9w473l+lfUTyXK7EHGQ1HWyuko+9Q9lrrmkSFEmQ3eiAGEAMP8000lVJhuvKvLJNxdZXXSDOTho75gjyViSf3x69945GHFMAGEAMO8U/SDtH55Rpk33ILNdtxDgYMTnMFk5mnzzW0Uu/evu/XNorQEgDADmj+FUt+D48g8X+fLFRVYN7BzDoSrQZGWS9/1MkSQZDOKxyIAwAJgXmmQw2v3yfT9VZnnsNc8hPN36hcjrp4t87He699BaGADCAODIm5nK8T/vKHL19UVWjNlKkkOrbZJVST7+B2XaxvalgDAAOPLm3C34wIuqLHdEOBynXZuML0s2J/nX3+zeRy1nAYQBwBE07HcduuQvyly7Id3dAjsRcRi0w+ToJP/+mjLDKXcNAGEAcETNbBf5by/pHmYGh8vMXYNbkvz7y901AIQBwBEznOp+vuyfi1xzU7JixN0CDq+26XYo+tRruh2KqkH39G0AYQBwuMxZW/DRl5QZS1JUDguH+TSsk2VjyYapIp/9f937qelEgDAAOIxmnmh87aVFvvmVIisrzy3gyGiTLEvyiZf3zzUYjecaAMIA4LDpxmD55KvKFEnKUYeEI6OpkxWD5Nrri1z96e7E9DRkQBgAHI6B2LCby11PJ1/6pyIr424BR/iddNC9m37qNd17amlaGyAMAA5DGPTTND7zxjK3JBkdj+1gOKLqYXJUkq98oMj0zi4MLEIGhAHAITaz6Pji1xdZnqQVBcwDo8uSrUkufqNFyIAwADjkZuZu33R5kWu+U2R5aYtS5oe27RYhX/rmYreABRAGAIdCPz3j0r8uUiepxhwS5smpWSfLi+Q7lxfZ/N0uDqx9AYQBwCGKgplPYb/0jiLL0j1gCuaFNhmMJ1NJvvC2Lgycn4AwADgEZp5dcMNXilx7fZHxgWlEzLM2aJLxJP/9NtOJAGEAcOgGXf0i4y//fT+NaMQxYX5p6mRZkXzvW0W23tAHrelEgDAAOLgGfQh87X1FxmM3IubpeTqW7Exy+Qe791fTiQBhAHAQ1cMkRbJjS5FrL+vXF5hGxDw1kuSr7+6mE3nYGSAMAA6imbsDV34o2ZZkZNwdA+bpuVp36wy+9W+zYeBhZ4AwADhoo63up6+/v8jA0WAea9pkdCTZPEy+98UuDuLuFiAMAA7GSGt2d5erLy4yFncLmN+qkWQ6yVWfKHbFAoAwADhAdT8NY/KW5MbvdGFgagbzPWZHk1zxMesMAGEAcNDM7Opy1afK7Ez3EKn4BJb5fM62yViS7352ThiIWUAYABwcV3+q64GicCyY35omGSuSTVuSzdd0J2wtDABhAHCAV6n+MnXtF6wvYIFok2osmUhy02X9HzlvAWEAcIBXqX4boh&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"
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Attach Image while chatting
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+definitions:
+  AttachImageWhileChattingrequest:
+    title: Attach Image while chattingRequest
+    type: object
+    properties:
+      imgurl:
+        description: ''
+        type: string
+    required:
+    - imgurl
